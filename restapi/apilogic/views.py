@@ -23,7 +23,7 @@ class EventsAPI(generics.ListAPIView):
             if count > 0:
                 random_index = randint(0, count - 1) 
                 return [known_events[event_name].objects.all()[random_index]]
-        return []
+        raise Http404()
             
     def get_serializer_class(self):
         event_name = self.kwargs['event']
@@ -49,10 +49,13 @@ class ArenasAPI(generics.ListAPIView):
         if event_name in known_aremas:
             actual_arena = known_aremas[event_name].objects.filter(active=1).first()
             if actual_arena is None:
-                return [known_aremas[event_name].objects.filter().first()]
+                arena =  known_aremas[event_name].objects.filter().first()
+                if arena is None:
+                    raise Http404()
+                return [arena]
             else:
                 return [actual_arena]
-        return []
+        raise Http404()
             
     def get_serializer_class(self):
         event_name = self.kwargs['arena']
