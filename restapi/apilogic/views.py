@@ -14,7 +14,7 @@ class EventsAPI(generics.ListAPIView):
         event_name = self.kwargs['event']
         known_events = {
             'derby': DerbyArenas,
-            'hideandseeek': HideandseekArenas,
+            'hideandseek': HideandseekArenas,
             'race': RaceArenas,
             'tdm': TdmArenas
         }
@@ -29,7 +29,7 @@ class EventsAPI(generics.ListAPIView):
         event_name = self.kwargs['event']
         known_events = {
             'derby': DerbyArenasSerializer,
-            'hideandseeek': HideandseekArenas,
+            'hideandseek': HideandseekArenasSerializer,
             'race': RaceArenasSerializer,
             'tdm': TdmArenasSerializer
         }
