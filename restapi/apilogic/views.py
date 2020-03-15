@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import Http404
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from apilogic.serializers import PlayersSpawnsSerializer, DerbyArenasSerializer, HideandseekArenasSerializer, RaceArenasSerializer, TdmArenasSerializer, SettingsSerializer, DmArenasSerializer, HeavyDmArenasSerializer, SniperArenasSerializer, OneShootArenasSerializer
+from apilogic.serializers import PlayersSpawnsSerializer, DerbyArenasSerializer, HideandseekArenasSerializer, RaceArenasSerializer, TdmArenasSerializer, PlayersSerializer, SettingsSerializer, DmArenasSerializer, HeavyDmArenasSerializer, SniperArenasSerializer, OneShootArenasSerializer
 from apilogic.models import DerbyArenas, HideandseekArenas, RaceArenas, TdmArenas, DmArenas, HeavyDmArenas, SniperArenas, OneShootArenas, PlayersSpawns, Players, Settings
 from rest_framework.response import Response
 from rest_framework.decorators import action
@@ -88,7 +88,7 @@ class PlayersAPI(generics.GenericAPIView):
             if 'password' in data and 'login' in data:
                 player = Players.objects.filter(password=data['password'], login=data['login']).first()
                 if player is not None:
-                    return Response()
+                    return Response(PlayersSerializer(player).data)            
 
         if action == 'register':
             if 'password' in data and 'login' in data and 'email' in data:
