@@ -133,9 +133,14 @@ class OneShootArenasWeapons(models.Model):
         db_table = 'one_shoot_arenas_weapons'
 
 
+class Ranks(models.Model):
+    name = models.CharField(max_length=255)
+    class Meta:
+        db_table = 'ranks'
+
 class Players(models.Model):
     login = models.CharField(max_length=35)
-    rank = models.CharField(max_length=255)
+    rank = models.ForeignKey(Ranks, models.DO_NOTHING, null=True)
     deaths = models.IntegerField(blank=True, default=0)
     kills = models.IntegerField(blank=True, default=0)
     password = models.CharField(max_length=255)
@@ -144,7 +149,6 @@ class Players(models.Model):
 
     class Meta:
         db_table = 'players'
-
 
 class PlayersSpawns(models.Model):
     x = models.DecimalField(max_digits=35, decimal_places=25)

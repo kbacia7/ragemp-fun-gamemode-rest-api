@@ -1,0 +1,16 @@
+[
+    {
+        "model": "apilogic.Ranks",
+        "pk": 1,
+        "fields": {
+            "name": "Gracz"
+        }
+    },
+    {
+        "model": "apilogic.Ranks",
+        "pk": 2,
+        "fields": {
+            "name": "Administrator"
+        }
+    }
+]

@@ -354,5 +354,14 @@
             "name": "oneshoot_max_players",
             "value": "30"
         }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 39,
+        "fields": {
+            "description": "Domyślna ranga (tabela ranks) dla nowych kont",
+            "name": "default_rank_id",
+            "value": "1"
+        }
     }
 ]
