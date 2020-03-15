@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from apilogic.models import DerbyArenas, DerbyArenasSpawns, DmArenas, DmArenasSpawns, DmArenasWeapons, HeavyDmArenas, HeavyDmArenasSpawns, HeavyDmArenasWeapons, HideandseekArenas, HideandseekArenasSpawns
-from apilogic.models import OneShootArenas, OneShootArenasSpawns, OneShootArenasWeapons, Players, PlayersSpawns, RaceArenas, RaceArenasCheckpoints, RaceArenasSpawns, Settings, SniperArenas, TdmArenas, TdmArenasSpawns, TdmArenasWeapons
+from apilogic.models import Ranks, OneShootArenas, OneShootArenasSpawns, OneShootArenasWeapons, Players, PlayersSpawns, RaceArenas, RaceArenasCheckpoints, RaceArenasSpawns, Settings, SniperArenas, TdmArenas, TdmArenasSpawns, TdmArenasWeapons
 
 
 
@@ -101,8 +101,17 @@ class OneShootArenasSerializer(serializers.ModelSerializer):
     class Meta:
         model = OneShootArenas
         fields = '__all__'
+        
+class RanksSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Ranks
+        fields = '__all__'
 
 class PlayersSerializer(serializers.ModelSerializer):
+    rank = RanksSerializer(
+        many=False,
+        read_only=True,
+    )
     class Meta:
         model = Players
         fields = '__all__'
