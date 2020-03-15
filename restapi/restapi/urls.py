@@ -18,7 +18,7 @@ from django.urls import path
 from django.conf.urls import url, include
 from django.contrib.auth.models import User
 from rest_framework import serializers, viewsets, routers, generics
-from apilogic.views import EventsAPI, ArenasAPI
+from apilogic.views import EventsAPI, ArenasAPI, PlayersAPI, SettingsAPI
 
 # Routers provide a way of automatically determining the URL conf.
 router = routers.DefaultRouter()
@@ -30,6 +30,8 @@ urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^events/(?P<event>.+)/$', EventsAPI.as_view()),
     url(r'^arenas/(?P<arena>.+)/$', ArenasAPI.as_view()),
+    url(r'^players/(?P<action>.+)/$', PlayersAPI.as_view()),
+    url(r'^settings/(?P<name>.+)/$', SettingsAPI.as_view()),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('admin/', admin.site.urls),
 ]
