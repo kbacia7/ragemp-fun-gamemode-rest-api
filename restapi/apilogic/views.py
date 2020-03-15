@@ -3,7 +3,7 @@ from django.http import Http404
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from apilogic.serializers import PlayersSpawnsSerializer, DerbyArenasSerializer, HideandseekArenasSerializer, RaceArenasSerializer, TdmArenasSerializer, PlayersSerializer, SettingsSerializer, DmArenasSerializer, HeavyDmArenasSerializer, SniperArenasSerializer, OneShootArenasSerializer
-from apilogic.models import DerbyArenas, HideandseekArenas, RaceArenas, TdmArenas, DmArenas, HeavyDmArenas, SniperArenas, OneShootArenas, PlayersSpawns, Players, Settings
+from apilogic.models import DerbyArenas, Ranks, HideandseekArenas, RaceArenas, TdmArenas, DmArenas, HeavyDmArenas, SniperArenas, OneShootArenas, PlayersSpawns, Players, Settings
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from random import randint
@@ -85,8 +85,9 @@ class PlayersAPI(generics.GenericAPIView):
                 return Response(0)
 
         if action == 'login':
-            if 'password' in data and 'login' in data:
-                player = Players.objects.filter(password=data['password'], login=data['login']).first()
+            if 'login' in data:
+                print(data)
+                player = Players.objects.filter(login=data['login']).first()
                 if player is not None:
                     return Response(PlayersSerializer(player).data)            
 
@@ -98,6 +99,8 @@ class PlayersAPI(generics.GenericAPIView):
                 player_with_this_email = Players.objects.filter(email=data['email']).first()
                 if player_with_this_email is not None:
                     return Response(2)
+                default_rank_setting = Settings.objects.filter(name='default_rank_id').first()
+                rank = Ranks.objects.filter(pk=int(default_rank_setting.value)).first()
                 Players(
                     login=data['login'],
                     password=data['password'],
@@ -105,7 +108,7 @@ class PlayersAPI(generics.GenericAPIView):
                     deaths=0,
                     kills=0,
                     ped=0,
-                    rank="Player"
+                    rank=rank
                 ).save()
                 return Response(0)
 
