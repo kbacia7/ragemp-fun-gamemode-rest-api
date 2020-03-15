@@ -1,0 +1,10 @@
+[
+    {
+        "model": "apilogic.RaceArenas",
+        "pk": 1,
+        "fields": {
+            "name": "Testowa arena",
+            "author": "System"
+        }
+    }
+]

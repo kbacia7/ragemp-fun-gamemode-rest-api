@@ -1,0 +1,358 @@
+[
+    {
+        "model": "apilogic.Settings",
+        "pk": 1,
+        "fields": {
+            "description": "Minimalna liczba graczy do startu zabawy Race",
+            "name": "race_min_players",
+            "value": "1"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 2,
+        "fields": {
+            "description": "Maksymalna liczba graczy do startu zabawy Race",
+            "name": "race_max_players",
+            "value": "30"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 3,
+        "fields": {
+            "description": "Minimalna kwota jaką może otrzymać gracz za wygraną na Race",
+            "name": "race_min_money",
+            "value": "1000"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 4,
+        "fields": {
+            "description": "Maksymalna kwota jaką może otrzymać gracz za wygraną na Race",
+            "name": "race_max_money",
+            "value": "3000"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 5,
+        "fields": {
+            "description": "Minimalna liczba expa jaką może otrzymać gracz za wygraną na Race",
+            "name": "race_min_exp",
+            "value": "3"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 6,
+        "fields": {
+            "description": "Maksymalna liczba expa jaką może otrzymać gracz za wygraną na Race",
+            "name": "race_max_exp",
+            "value": "10"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 7,
+        "fields": {
+            "description": "Nazwa wyświetlana dla Race w tabeli",
+            "name": "race_display_name",
+            "value": "Race"
+        }
+    },
+
+    {
+        "model": "apilogic.Settings",
+        "pk": 8,
+        "fields": {
+            "description": "Minimalna liczba graczy do startu zabawy TDM",
+            "name": "tdm_min_players",
+            "value": "1"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 9,
+        "fields": {
+            "description": "Maksymalna liczba graczy do startu zabawy TDM",
+            "name": "tdm_max_players",
+            "value": "30"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 10,
+        "fields": {
+            "description": "Minimalna kwota jaką może otrzymać gracz za wygraną na TDM",
+            "name": "tdm_min_money",
+            "value": "1000"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 11,
+        "fields": {
+            "description": "Maksymalna kwota jaką może otrzymać gracz za wygraną na TDM",
+            "name": "tdm_max_money",
+            "value": "3000"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 12,
+        "fields": {
+            "description": "Minimalna liczba expa jaką może otrzymać gracz za wygraną na TDM",
+            "name": "tdm_min_exp",
+            "value": "3"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 13,
+        "fields": {
+            "description": "Maksymalna liczba expa jaką może otrzymać gracz za wygraną na TDM",
+            "name": "tdm_max_exp",
+            "value": "10"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 14,
+        "fields": {
+            "description": "Nazwa wyświetlana dla TDM w tabeli",
+            "name": "tdm_display_name",
+            "value": "TDM"
+        }
+    },
+
+    {
+        "model": "apilogic.Settings",
+        "pk": 15,
+        "fields": {
+            "description": "Minimalna liczba graczy do startu zabawy Derby",
+            "name": "derby_min_players",
+            "value": "1"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 16,
+        "fields": {
+            "description": "Maksymalna liczba graczy do startu zabawy Derby",
+            "name": "derby_max_players",
+            "value": "30"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 17,
+        "fields": {
+            "description": "Minimalna kwota jaką może otrzymać gracz za wygraną na Derby",
+            "name": "derby_min_money",
+            "value": "1000"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 18,
+        "fields": {
+            "description": "Maksymalna kwota jaką może otrzymać gracz za wygraną na Derby",
+            "name": "derby_max_money",
+            "value": "3000"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 19,
+        "fields": {
+            "description": "Minimalna liczba expa jaką może otrzymać gracz za wygraną na Derby",
+            "name": "derby_min_exp",
+            "value": "3"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 20,
+        "fields": {
+            "description": "Maksymalna liczba expa jaką może otrzymać gracz za wygraną na Derby",
+            "name": "derby_max_exp",
+            "value": "10"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 21,
+        "fields": {
+            "description": "Nazwa wyświetlana dla Derby w tabeli",
+            "name": "derby_display_name",
+            "value": "Derby"
+        }
+    },
+
+    {
+        "model": "apilogic.Settings",
+        "pk": 22,
+        "fields": {
+            "description": "Minimalna liczba graczy do startu zabawy Hide&Seek",
+            "name": "hideandseek_min_players",
+            "value": "1"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 23,
+        "fields": {
+            "description": "Maksymalna liczba graczy do startu zabawy Hide&Seek",
+            "name": "hideandseek_max_players",
+            "value": "30"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 24,
+        "fields": {
+            "description": "Minimalna kwota jaką może otrzymać gracz za wygraną na Hide&Seek",
+            "name": "hideandseek_min_money",
+            "value": "1000"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 25,
+        "fields": {
+            "description": "Maksymalna kwota jaką może otrzymać gracz za wygraną na Hide&Seek",
+            "name": "hideandseek_max_money",
+            "value": "3000"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 26,
+        "fields": {
+            "description": "Minimalna liczba expa jaką może otrzymać gracz za wygraną na Hide&Seek",
+            "name": "hideandseek_min_exp",
+            "value": "3"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 27,
+        "fields": {
+            "description": "Maksymalna liczba expa jaką może otrzymać gracz za wygraną na Hide&Seek",
+            "name": "hideandseek_max_exp",
+            "value": "10"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 28,
+        "fields": {
+            "description": "Nazwa wyświetlana dla Hide&Seek w tabeli",
+            "name": "hideandseek_display_name",
+            "value": "Hide&Seek"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 29,
+        "fields": {
+            "description": "Pozycja X w którą zostanie przeniesiony szukający podczas gdy gracze będą się chować",
+            "name": "hideandseek_looking_wait_room_x",
+            "value": "0"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 30,
+        "fields": {
+            "description": "Pozycja Y w którą zostanie przeniesiony szukający podczas gdy gracze będą się chować",
+            "name": "hideandseek_looking_wait_room_y",
+            "value": "0"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 31,
+        "fields": {
+            "description": "Pozycja Z w którą zostanie przeniesiony szukający podczas gdy gracze będą się chować",
+            "name": "hideandseek_looking_wait_room_z",
+            "value": "0"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 32,
+        "fields": {
+            "description": "Nazwa wyświetlana dla dm w tabeli",
+            "name": "dm_display_name",
+            "value": "DM"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 33,
+        "fields": {
+            "description": "Maksymalna liczba graczy jaka może się zapisać na DM",
+            "name": "dm_max_players",
+            "value": "30"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 34,
+        "fields": {
+            "description": "Nazwa wyświetlana dla HeavyDM w tabeli",
+            "name": "heavydm_display_name",
+            "value": "HeavyDM"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 35,
+        "fields": {
+            "description": "Maksymalna liczba graczy jaka może się zapisać na HeavyDM",
+            "name": "heavydm_max_players",
+            "value": "30"
+        }
+    },
+    
+    {
+        "model": "apilogic.Settings",
+        "pk": 36,
+        "fields": {
+            "description": "Nazwa wyświetlana dla sniper w tabeli",
+            "name": "sniper_display_name",
+            "value": "Sniper"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 37,
+        "fields": {
+            "description": "Maksymalna liczba graczy jaka może się zapisać na sniper",
+            "name": "sniper_max_players",
+            "value": "30"
+        }
+    },
+    
+    {
+        "model": "apilogic.Settings",
+        "pk": 38,
+        "fields": {
+            "description": "Nazwa wyświetlana dla oneshoot w tabeli",
+            "name": "oneshoot_display_name",
+            "value": "OneShoot"
+        }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 39,
+        "fields": {
+            "description": "Maksymalna liczba graczy jaka może się zapisać na oneshoot",
+            "name": "oneshoot_max_players",
+            "value": "30"
+        }
+    }
+]
