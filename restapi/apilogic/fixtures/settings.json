@@ -363,5 +363,14 @@
             "name": "default_rank_id",
             "value": "1"
         }
+    },
+    {
+        "model": "apilogic.Settings",
+        "pk": 40,
+        "fields": {
+            "description": "Wszystkie dozwolone obrazki dla skinów",
+            "name": "filenames_skins",
+            "value": "0x0DE9A30A.png,0x400AEC41.png,0x5244247D.png,0xA1435105.png,0xD090C350.png,0xE7714013.png,0xF5B0079D.png,0xFBF98469.png,0xCE2CB751.png,0xB6B1EDA8.png"
+        }
     }
 ]

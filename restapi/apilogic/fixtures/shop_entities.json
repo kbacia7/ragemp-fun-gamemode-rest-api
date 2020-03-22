@@ -1,0 +1,222 @@
+[
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 1,
+        "fields": {
+            "filter_id": 1,
+            "filename": "0x0DE9A30A.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 2,
+        "fields": {
+            "filter_id": 1,
+            "filename": "0x3C438CD2.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 3,
+        "fields": {
+            "filter_id": 1,
+            "filename": "0x4D6DE57E.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 4,
+        "fields": {
+            "filter_id": 1,
+            "filename": "0x4DA6E849.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 5,
+        "fields": {
+            "filter_id": 1,
+            "filename": "0x8D67EE7D.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 6,
+        "fields": {
+            "filter_id": 1,
+            "filename": "0x27BD51D4.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 7,
+        "fields": {
+            "filter_id": 2,
+            "filename": "0x400AEC41.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 8,
+        "fields": {
+            "filter_id": 2,
+            "filename": "0x799E9EEE.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 9,
+        "fields": {
+            "filter_id": 2,
+            "filename": "0x7461A0B0.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 10,
+        "fields": {
+            "filter_id": 2,
+            "filename": "0x5244247D.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 11,
+        "fields": {
+            "filter_id": 2,
+            "filename": "0x38430167.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 12,
+        "fields": {
+            "filter_id": 2,
+            "filename": "0xA1435105.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 13,
+        "fields": {
+            "filter_id": 2,
+            "filename": "0xAD340F5A.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 14,
+        "fields": {
+            "filter_id": 2,
+            "filename": "0xB6B1EDA8.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 15,
+        "fields": {
+            "filter_id": 3,
+            "filename": "0xB9DD0300.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 16,
+        "fields": {
+            "filter_id": 2,
+            "filename": "0xCE2CB751.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 17,
+        "fields": {
+            "filter_id": 2,
+            "filename": "0xD090C350.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 18,
+        "fields": {
+            "filter_id": 2,
+            "filename": "0xE7714013.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 19,
+        "fields": {
+            "filter_id": 3,
+            "filename": "0xF5B0079D.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": 20,
+        "fields": {
+            "filter_id": 3,
+            "filename": "0xFBF98469.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null
+        }
+    }
+]

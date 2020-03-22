@@ -252,3 +252,33 @@ class TdmArenasWeapons(models.Model):
 
     class Meta:
         db_table = 'tdm_arenas_weapons'
+
+class ShopTabData(models.Model):
+    parent = models.ForeignKey('self', models.DO_NOTHING, null=True, related_name="subcategories")
+    display_name = models.CharField(max_length=64)
+    name = models.CharField(max_length=32)
+    money = models.IntegerField()
+    diamonds = models.IntegerField()
+    column_size = models.DecimalField(max_digits=2, decimal_places=1, default=1)
+
+    class Meta:
+        db_table = 'shop_tabs' 
+    
+class ShopTabFilterData(models.Model):
+    tab = models.ForeignKey(ShopTabData, models.DO_NOTHING, null=False, related_name="filters")
+    display_name = models.CharField(max_length=64)
+    name = models.CharField(max_length=32)
+
+    class Meta:
+        db_table = 'shop_tabs_filters'
+
+        
+class ShopEntity(models.Model):
+    filter = models.ForeignKey(ShopTabFilterData, models.DO_NOTHING, null=False, related_name="entities")
+    filename = models.CharField(max_length=50)
+    money = models.IntegerField(null=True)
+    diamonds = models.IntegerField(null=True)
+    display_name = models.CharField(max_length=64, null=True)
+    class Meta:
+        db_table = 'shop_entities'
+

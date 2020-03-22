@@ -2,7 +2,7 @@ from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from apilogic.models import DerbyArenas, DerbyArenasSpawns, DmArenas, DmArenasSpawns, DmArenasWeapons, HeavyDmArenas, HeavyDmArenasSpawns, HeavyDmArenasWeapons, HideandseekArenas, HideandseekArenasSpawns
 from apilogic.models import Ranks, OneShootArenas, OneShootArenasSpawns, OneShootArenasWeapons, Players, PlayersSpawns, RaceArenas, RaceArenasCheckpoints, RaceArenasSpawns, Settings, SniperArenas, TdmArenas, TdmArenasSpawns, TdmArenasWeapons
-
+from apilogic.models import ShopEntity, ShopTabFilterData, ShopTabData
 
 
 class DerbyArenasSpawnsSerializer(serializers.ModelSerializer):
@@ -195,4 +195,49 @@ class TdmArenasSerializer(serializers.ModelSerializer):
         model = TdmArenas
         fields = '__all__'
 
+class TdmArenasSerializer(serializers.ModelSerializer):
+    spawns = TdmArenasSpawnsSerializer(
+        many=True,
+        read_only=True,
+    )
+    weapons = TdmArenasWeaponsSerializer(
+        many=True,
+        read_only=True,
+    )
+    class Meta:
+        model = TdmArenas
+        fields = '__all__'
 
+class ShopEntitySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ShopEntity
+        fields = '__all__'
+
+class ShopTabFilterDataSerializer(serializers.ModelSerializer):
+    entities = ShopEntitySerializer(
+        many=True,
+        read_only=True
+    )
+    class Meta:
+        model = ShopTabFilterData
+        fields = '__all__'
+
+
+class ShopTabDataSerializer(serializers.ModelSerializer):
+    filters = ShopTabFilterDataSerializer(
+        many=True,
+        read_only=True
+    )
+    class Meta:
+        model = ShopTabData
+        fields = '__all__'
+    
+    def get_fields(self):
+        fields = super(ShopTabDataSerializer, self).get_fields()
+        fields['subcategories'] = ShopTabDataSerializer(many=True)
+        return fields
+
+class ShopTabDataLazySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ShopTabData
+        fields = '__all__'

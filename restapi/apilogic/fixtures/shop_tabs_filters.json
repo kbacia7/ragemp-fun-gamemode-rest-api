@@ -1,0 +1,29 @@
+[
+    {
+        "model": "apilogic.ShopTabFilterData",
+        "pk": 1,
+        "fields": {
+            "tab_id": 1,
+            "name": "A",
+            "display_name": "SHOP_TAB_FILTER_A"
+        }
+    },
+    {
+        "model": "apilogic.ShopTabFilterData",
+        "pk": 2,
+        "fields": {
+            "tab_id": 1,
+            "name": "B",
+            "display_name": "SHOP_TAB_FILTER_B"
+        }
+    },
+    {
+        "model": "apilogic.ShopTabFilterData",
+        "pk": 3,
+        "fields": {
+            "tab_id": 1,
+            "name": "C",
+            "display_name": "SHOP_TAB_FILTER_C"
+        }
+    }
+]

@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.http import Http404
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from apilogic.serializers import PlayersSpawnsSerializer, DerbyArenasSerializer, HideandseekArenasSerializer, RaceArenasSerializer, TdmArenasSerializer, PlayersSerializer, SettingsSerializer, DmArenasSerializer, HeavyDmArenasSerializer, SniperArenasSerializer, OneShootArenasSerializer
-from apilogic.models import DerbyArenas, Ranks, HideandseekArenas, RaceArenas, TdmArenas, DmArenas, HeavyDmArenas, SniperArenas, OneShootArenas, PlayersSpawns, Players, Settings
+from apilogic.serializers import PlayersSpawnsSerializer, ShopTabDataLazySerializer, ShopTabDataSerializer, DerbyArenasSerializer, HideandseekArenasSerializer, RaceArenasSerializer, TdmArenasSerializer, PlayersSerializer, SettingsSerializer, DmArenasSerializer, HeavyDmArenasSerializer, SniperArenasSerializer, OneShootArenasSerializer
+from apilogic.models import DerbyArenas, ShopTabData, Ranks, HideandseekArenas, RaceArenas, TdmArenas, DmArenas, HeavyDmArenas, SniperArenas, OneShootArenas, PlayersSpawns, Players, Settings
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from random import randint
@@ -148,3 +148,18 @@ class SettingsAPI(generics.ListAPIView):
             
     def get_serializer_class(self):
         return SettingsSerializer
+
+
+class ShopAPI(generics.ListAPIView):    
+    def get_queryset(self):
+        tab_name = self.kwargs['tab']
+        if tab_name != 'all':
+            return ShopTabData.objects.filter(name=tab_name).all()
+        else:
+            return ShopTabData.objects.all()
+        
+    def get_serializer_class(self):
+        if self.kwargs['tab'] != 'all':
+            return ShopTabDataSerializer
+        else:
+            return ShopTabDataLazySerializer
