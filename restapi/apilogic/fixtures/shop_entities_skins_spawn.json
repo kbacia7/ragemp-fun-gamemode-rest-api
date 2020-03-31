@@ -1,6 +1,6 @@
 [
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 1,
@@ -12,7 +12,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 1,
@@ -25,7 +25,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 1,
@@ -37,7 +37,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 1,
@@ -49,7 +49,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 1,
@@ -62,7 +62,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 1,
@@ -74,7 +74,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 2,
@@ -86,7 +86,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 2,
@@ -98,7 +98,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 2,
@@ -110,7 +110,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 2,
@@ -122,7 +122,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 2,
@@ -134,7 +134,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 2,
@@ -146,7 +146,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 2,
@@ -158,7 +158,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 2,
@@ -170,7 +170,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 3,
@@ -182,7 +182,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 2,
@@ -194,7 +194,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 2,
@@ -206,7 +206,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 2,
@@ -218,7 +218,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 3,
@@ -231,7 +231,7 @@
         }
     },
     {
-        "model": "apilogic.ShopEntity",
+        "model": "apilogic.ShopEntities",
         "pk": null,
         "fields": {
             "filter_id": 3,
