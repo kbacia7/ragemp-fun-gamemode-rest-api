@@ -146,6 +146,8 @@ class Players(models.Model):
     password = models.CharField(max_length=255)
     email = models.CharField(max_length=50)
     ped = models.IntegerField()
+    money = models.IntegerField()
+    diamonds = models.IntegerField()
 
     class Meta:
         db_table = 'players'
@@ -256,6 +258,8 @@ class TdmArenasWeapons(models.Model):
 class ShopTabData(models.Model):
     parent = models.ForeignKey('self', models.DO_NOTHING, null=True, related_name="subcategories")
     display_name = models.CharField(max_length=64)
+    title_display_name = models.CharField(max_length=64, null=True)
+    description_display_name = models.CharField(max_length=64, null=True)
     name = models.CharField(max_length=32)
     money = models.IntegerField()
     diamonds = models.IntegerField()
@@ -265,7 +269,7 @@ class ShopTabData(models.Model):
         db_table = 'shop_tabs' 
     
 class ShopTabFilterData(models.Model):
-    tab = models.ForeignKey(ShopTabData, models.DO_NOTHING, null=False, related_name="filters")
+    tab = models.ForeignKey(ShopTabData, models.DO_NOTHING, related_name="filters") 
     display_name = models.CharField(max_length=64)
     name = models.CharField(max_length=32)
 
@@ -273,9 +277,10 @@ class ShopTabFilterData(models.Model):
         db_table = 'shop_tabs_filters'
 
         
-class ShopEntity(models.Model):
+class ShopEntities(models.Model):
     filter = models.ForeignKey(ShopTabFilterData, models.DO_NOTHING, null=False, related_name="entities")
     filename = models.CharField(max_length=50)
+    ragemp_item_id = models.PositiveIntegerField(null=False)
     money = models.IntegerField(null=True)
     diamonds = models.IntegerField(null=True)
     display_name = models.CharField(max_length=64, null=True)
