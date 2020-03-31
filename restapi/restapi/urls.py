@@ -18,7 +18,7 @@ from django.urls import path
 from django.conf.urls import url, include
 from django.contrib.auth.models import User
 from rest_framework import serializers, viewsets, routers, generics
-from apilogic.views import EventsAPI, ArenasAPI, PlayersAPI, SettingsAPI, ShopAPI
+from apilogic.views import EventsAPI, ArenasAPI, PlayersAPI, SettingsAPI, ShopAPI, BuyAPI
 
 # Routers provide a way of automatically determining the URL conf.
 router = routers.DefaultRouter()
@@ -33,6 +33,7 @@ urlpatterns = [
     url(r'^players/(?P<action>.+)/$', PlayersAPI.as_view()),
     url(r'^settings/(?P<name>.+)/$', SettingsAPI.as_view()),
     url(r'^shop/(?P<tab>.+)/$', ShopAPI.as_view()),
+    url(r'^buy/$', BuyAPI.as_view()),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('admin/', admin.site.urls),
 ]

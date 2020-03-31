@@ -3,7 +3,7 @@ from django.http import Http404
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from apilogic.serializers import PlayersSpawnsSerializer, ShopTabDataLazySerializer, ShopTabDataSerializer, DerbyArenasSerializer, HideandseekArenasSerializer, RaceArenasSerializer, TdmArenasSerializer, PlayersSerializer, SettingsSerializer, DmArenasSerializer, HeavyDmArenasSerializer, SniperArenasSerializer, OneShootArenasSerializer
-from apilogic.models import DerbyArenas, ShopTabData, Ranks, HideandseekArenas, RaceArenas, TdmArenas, DmArenas, HeavyDmArenas, SniperArenas, OneShootArenas, PlayersSpawns, Players, Settings
+from apilogic.models import DerbyArenas, ShopEntities, ShopTabData, Ranks, HideandseekArenas, RaceArenas, TdmArenas, DmArenas, HeavyDmArenas, SniperArenas, OneShootArenas, PlayersSpawns, Players, Settings
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from random import randint
@@ -108,7 +108,9 @@ class PlayersAPI(generics.GenericAPIView):
                     deaths=0,
                     kills=0,
                     ped=0,
-                    rank=rank
+                    rank=rank,
+                    money=1000,
+                    diamonds=5
                 ).save()
                 return Response(0)
 
@@ -156,10 +158,51 @@ class ShopAPI(generics.ListAPIView):
         if tab_name != 'all':
             return ShopTabData.objects.filter(name=tab_name).all()
         else:
-            return ShopTabData.objects.all()
+            return ShopTabData.objects.exclude(parent__isnull=False).all()
         
     def get_serializer_class(self):
         if self.kwargs['tab'] != 'all':
             return ShopTabDataSerializer
         else:
             return ShopTabDataLazySerializer
+
+class BuyAPI(generics.GenericAPIView):    
+    def post(self, request):
+        data = request.data
+        print(data)
+        is_guest = data['player_id'] == "0"
+        print(is_guest)
+        if data['buy_in'] is not None and len(data['buy_in']) > 0:
+            if int(data['item_id']) is not None and int(data['item_id']) > 0 and data['currency'] is not None and len(data['currency']) > 0:
+                if data['buy_in'] == 'shop':
+                    response = {}
+                    player = Players.objects.filter(pk=int(data['player_id'])).first()
+                    shop_entity = ShopEntities.objects.filter(pk=int(data['item_id'])).first()
+                    response_code = 1
+                    cost = 0
+                    if (player is not None or is_guest is True) and shop_entity is not None:
+                        if is_guest is True:
+                            if data['currency'] == 'MONEY':
+                                cost = shop_entity.money
+                            else:
+                                cost = shop_entity.diamonds
+                            response_code = 2
+                        else:
+                            if data['currency'] == 'MONEY':
+                                if player.money >= shop_entity.money:
+                                    player.money -= shop_entity.money
+                                    cost = shop_entity.money
+                                    response_code = 0
+                            elif data['currency'] == 'DIAMONDS':
+                                if player.diamonds >= shop_entity.diamonds:
+                                    player.diamonds -= shop_entity.diamonds
+                                    cost = shop_entity.diamonds
+                                    response_code = 0
+                        return Response({
+                            'code': response_code,
+                            'tab_name': shop_entity.filter.tab.name,
+                            'cost': cost,
+                            'ragemp_item_id': shop_entity.ragemp_item_id
+                        })
+        return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+

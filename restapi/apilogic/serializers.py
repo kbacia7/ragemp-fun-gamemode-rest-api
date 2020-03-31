@@ -2,7 +2,7 @@ from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from apilogic.models import DerbyArenas, DerbyArenasSpawns, DmArenas, DmArenasSpawns, DmArenasWeapons, HeavyDmArenas, HeavyDmArenasSpawns, HeavyDmArenasWeapons, HideandseekArenas, HideandseekArenasSpawns
 from apilogic.models import Ranks, OneShootArenas, OneShootArenasSpawns, OneShootArenasWeapons, Players, PlayersSpawns, RaceArenas, RaceArenasCheckpoints, RaceArenasSpawns, Settings, SniperArenas, TdmArenas, TdmArenasSpawns, TdmArenasWeapons
-from apilogic.models import ShopEntity, ShopTabFilterData, ShopTabData
+from apilogic.models import ShopEntities, ShopTabFilterData, ShopTabData
 
 
 class DerbyArenasSpawnsSerializer(serializers.ModelSerializer):
@@ -210,7 +210,7 @@ class TdmArenasSerializer(serializers.ModelSerializer):
 
 class ShopEntitySerializer(serializers.ModelSerializer):
     class Meta:
-        model = ShopEntity
+        model = ShopEntities
         fields = '__all__'
 
 class ShopTabFilterDataSerializer(serializers.ModelSerializer):
@@ -241,3 +241,8 @@ class ShopTabDataLazySerializer(serializers.ModelSerializer):
     class Meta:
         model = ShopTabData
         fields = '__all__'
+    
+    def get_fields(self):
+        fields = super(ShopTabDataLazySerializer, self).get_fields()
+        fields['subcategories'] = ShopTabDataLazySerializer(many=True)
+        return fields
