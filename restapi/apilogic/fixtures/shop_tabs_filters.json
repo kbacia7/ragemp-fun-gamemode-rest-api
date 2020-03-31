@@ -70,5 +70,41 @@
             "name": "B",
             "display_name": "SHOP_TAB_FILTER_B"
         }
+    },
+    {
+        "model": "apilogic.ShopTabFilterData",
+        "pk": 9,
+        "fields": {
+            "tab": 7,
+            "name": "A",
+            "display_name": "SHOP_TAB_FILTER_A"
+        }
+    },
+    {
+        "model": "apilogic.ShopTabFilterData",
+        "pk": 10,
+        "fields": {
+            "tab": 7,
+            "name": "B",
+            "display_name": "SHOP_TAB_FILTER_B"
+        }
+    },
+    {
+        "model": "apilogic.ShopTabFilterData",
+        "pk": 11,
+        "fields": {
+            "tab": 8,
+            "name": "A",
+            "display_name": "SHOP_TAB_FILTER_A"
+        }
+    },
+    {
+        "model": "apilogic.ShopTabFilterData",
+        "pk": 12,
+        "fields": {
+            "tab": 8,
+            "name": "B",
+            "display_name": "SHOP_TAB_FILTER_B"
+        }
     }
 ]

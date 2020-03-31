@@ -1,0 +1,86 @@
+[
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 9,
+            "filename": "weapons/0x3AABBBAA.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 984333226
+        }
+    },
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 9,
+            "filename": "weapons/0x9D07F764.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 2634544996
+        }
+    },
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 9,
+            "filename": "weapons/0x476BF155.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 1198256469
+        }
+    },
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 9,
+            "filename": "weapons/0x47757124.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 1198879012
+        }
+    },
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 9,
+            "filename": "weapons/0xAF113F99.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 2937143193
+        }
+    },
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 10,
+            "filename": "weapons/0xEFE7E2DF.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 4024951519
+        }
+    },
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 10,
+            "filename": "weapons/0xFDBC8A50.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 4256991824
+        }
+    }
+]

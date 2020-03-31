@@ -77,5 +77,33 @@
             "diamonds": 0,
             "parent_id": 3
         }
+    },
+    {
+        "model": "apilogic.ShopTabData",
+        "pk": 7,
+        "fields": {
+            "display_name": "SHOP_TAB_WEAPONS_SPAWN",
+            "title_display_name": "SHOP_TAB_WEAPONS_SPAWN_TITLE",
+            "description_display_name": "SHOP_TAB_WEAPONS_SPAWN_DESCRIPTION",
+            "name": "weapons-spawns",
+            "column_size": 2,
+            "money": 0,
+            "diamonds": 0,
+            "parent_id": 2
+        }
+    },
+    {
+        "model": "apilogic.ShopTabData",
+        "pk": 8,
+        "fields": {
+            "display_name": "SHOP_TAB_WEAPONS_ONCE",
+            "title_display_name": "SHOP_TAB_WEAPONS_ONCE_TITLE",
+            "description_display_name": "SHOP_TAB_WEAPONS_ONCE_DESCRIPTION",
+            "name": "weapons-once",
+            "column_size": 2,
+            "money": 0,
+            "diamonds": 0,
+            "parent_id": 2
+        }
     }
 ]
