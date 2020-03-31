@@ -52,5 +52,23 @@
             "name": "C",
             "display_name": "SHOP_TAB_FILTER_C"
         }
+    },
+    {
+        "model": "apilogic.ShopTabFilterData",
+        "pk": 7,
+        "fields": {
+            "tab": 6,
+            "name": "A",
+            "display_name": "SHOP_TAB_FILTER_A"
+        }
+    },
+    {
+        "model": "apilogic.ShopTabFilterData",
+        "pk": 8,
+        "fields": {
+            "tab": 6,
+            "name": "B",
+            "display_name": "SHOP_TAB_FILTER_B"
+        }
     }
 ]

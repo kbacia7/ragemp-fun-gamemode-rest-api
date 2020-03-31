@@ -63,5 +63,19 @@
             "diamonds": 0,
             "parent_id": 1
         }
+    },
+    {
+        "model": "apilogic.ShopTabData",
+        "pk": 6,
+        "fields": {
+            "display_name": "SHOP_TAB_VEHICLES_SPAWN",
+            "title_display_name": "SHOP_TAB_VEHICLES_SPAWN_TITLE",
+            "description_display_name": "SHOP_TAB_VEHICLES_SPAWN_DESCRIPTION",
+            "name": "vehicles-spawn",
+            "column_size": 3,
+            "money": 0,
+            "diamonds": 0,
+            "parent_id": 3
+        }
     }
 ]

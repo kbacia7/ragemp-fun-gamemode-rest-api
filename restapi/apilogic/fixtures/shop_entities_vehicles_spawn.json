@@ -1,0 +1,158 @@
+[
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 7,
+            "filename": "vehicles/0x2F03547B.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 788747387
+        }
+    },
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 7,
+            "filename": "vehicles/0x8CF5CAE1.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 2364918497
+        }
+    },
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 7,
+            "filename": "vehicles/0x9DC66994.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 2647026068
+        }
+    },
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 7,
+            "filename": "vehicles/0x23CA25F2.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 600450546
+        }
+    },
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 7,
+            "filename": "vehicles/0x36A167E0.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 916547552
+        }
+    },
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 7,
+            "filename": "vehicles/0x810369E2.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 2164484578
+        }
+    },
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 7,
+            "filename": "vehicles/0x64430650.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 1682114128
+        }
+    },
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 7,
+            "filename": "vehicles/0xA52F6866.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 2771347558
+        }
+    },
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 7,
+            "filename": "vehicles/0xAA6F980A.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 2859440138
+        }
+    },
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 7,
+            "filename": "vehicles/0xE8A8BDA8.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 3903372712
+        }
+    },
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 8,
+            "filename": "vehicles/0xE18195B2.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 3783366066
+        }
+    },
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 8,
+            "filename": "vehicles/0xEB298297.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 3945366167
+        }
+    },
+    {
+        "model": "apilogic.ShopEntities",
+        "pk": null,
+        "fields": {
+            "filter_id": 8,
+            "filename": "vehicles/0xED552C74.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 3981782132
+        }
+    }
+]
