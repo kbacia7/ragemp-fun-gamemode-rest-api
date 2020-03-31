@@ -3,7 +3,7 @@
         "model": "apilogic.ShopTabFilterData",
         "pk": 1,
         "fields": {
-            "tab_id": 1,
+            "tab": 4,
             "name": "A",
             "display_name": "SHOP_TAB_FILTER_A"
         }
@@ -12,7 +12,7 @@
         "model": "apilogic.ShopTabFilterData",
         "pk": 2,
         "fields": {
-            "tab_id": 1,
+            "tab": 4,
             "name": "B",
             "display_name": "SHOP_TAB_FILTER_B"
         }
@@ -21,7 +21,34 @@
         "model": "apilogic.ShopTabFilterData",
         "pk": 3,
         "fields": {
-            "tab_id": 1,
+            "tab": 4,
+            "name": "C",
+            "display_name": "SHOP_TAB_FILTER_C"
+        }
+    },
+    {
+        "model": "apilogic.ShopTabFilterData",
+        "pk": 4,
+        "fields": {
+            "tab": 5,
+            "name": "A",
+            "display_name": "SHOP_TAB_FILTER_A"
+        }
+    },
+    {
+        "model": "apilogic.ShopTabFilterData",
+        "pk": 5,
+        "fields": {
+            "tab": 5,
+            "name": "B",
+            "display_name": "SHOP_TAB_FILTER_B"
+        }
+    },
+    {
+        "model": "apilogic.ShopTabFilterData",
+        "pk": 6,
+        "fields": {
+            "tab": 5,
             "name": "C",
             "display_name": "SHOP_TAB_FILTER_C"
         }

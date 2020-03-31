@@ -1,0 +1,245 @@
+[
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 4,
+            "filename": "skins/0x0DE9A30A.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 233415434
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 4,
+            "filename": "skins/0x3C438CD2.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 1011059922
+
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 4,
+            "filename": "skins/0x4D6DE57E.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 1299047806
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 4,
+            "filename": "skins/0x4DA6E849.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 1302784073
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 4,
+            "filename": "skins/0x8D67EE7D.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 2372398717
+
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 4,
+            "filename": "skins/0x27BD51D4.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 666718676
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 5,
+            "filename": "skins/0x400AEC41.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 1074457665
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 5,
+            "filename": "skins/0x799E9EEE.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 2040438510
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 5,
+            "filename": "skins/0x7461A0B0.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 1952555184
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 5,
+            "filename": "skins/0x5244247D.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 1380197501
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 5,
+            "filename": "skins/0x38430167.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 943915367
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 5,
+            "filename": "skins/0xA1435105.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 2705543429
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 5,
+            "filename": "skins/0xAD340F5A.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 2905870170
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 5,
+            "filename": "skins/0xB6B1EDA8.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 3065114024
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 3,
+            "filename": "skins/0xB9DD0300.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 3118269184
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 5,
+            "filename": "skins/0xCE2CB751.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 3459037009
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 5,
+            "filename": "skins/0xD090C350.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 3499148112
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 5,
+            "filename": "skins/0xE7714013.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 3882958867
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 6,
+            "filename": "skins/0xF5B0079D.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 4121954205
+
+        }
+    },
+    {
+        "model": "apilogic.ShopEntity",
+        "pk": null,
+        "fields": {
+            "filter_id": 6,
+            "filename": "skins/0xFBF98469.png",
+            "money": 0,
+            "diamonds": 0,
+            "display_name": null,
+            "ragemp_item_id": 4227433577
+        }
+    }
+]

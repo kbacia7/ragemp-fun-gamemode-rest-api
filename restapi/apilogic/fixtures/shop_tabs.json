@@ -4,7 +4,10 @@
         "pk": 1,
         "fields": {
             "display_name": "SHOP_TAB_SKINS",
+            "title_display_name": null,
+            "description_display_name": null,
             "name": "skins",
+            "column_size": 1.2,
             "money": 0,
             "diamonds": 0
         }
@@ -14,6 +17,8 @@
         "pk": 2,
         "fields": {
             "display_name": "SHOP_TAB_WEAPONS",
+            "title_display_name": null,
+            "description_display_name": null,
             "name": "weapons",
             "money": 0,
             "diamonds": 0
@@ -24,9 +29,39 @@
         "pk": 3,
         "fields": {
             "display_name": "SHOP_TAB_VEHICLES",
+            "title_display_name": null,
+            "description_display_name": null,
             "name": "vehicles",
             "money": 0,
             "diamonds": 0
+        }
+    },
+    {
+        "model": "apilogic.ShopTabData",
+        "pk": 4,
+        "fields": {
+            "display_name": "SHOP_TAB_SKINS_SPAWN",
+            "title_display_name": "SHOP_TAB_SKINS_SPAWN_TITLE",
+            "description_display_name": "SHOP_TAB_SKINS_SPAWN_DESCRIPTION",
+            "name": "skins-spawns",
+            "column_size": 1.2,
+            "money": 0,
+            "diamonds": 0,
+            "parent_id": 1
+        }
+    },
+    {
+        "model": "apilogic.ShopTabData",
+        "pk": 5,
+        "fields": {
+            "display_name": "SHOP_TAB_SKINS_ONCE",
+            "title_display_name": "SHOP_TAB_SKINS_ONCE_TITLE",
+            "description_display_name": "SHOP_TAB_SKINS_ONCE_DESCRIPTION",
+            "name": "skins-once",
+            "column_size": 1.2,
+            "money": 0,
+            "diamonds": 0,
+            "parent_id": 1
         }
     }
 ]
