@@ -1,0 +1,106 @@
+[
+    {
+        "model": "apilogic.Items",
+        "pk": 1,
+        "fields": {
+            "section": 1,
+            "title_display_name": "EQ_TEST_WEAPON_TITLE",
+            "sub_section": null,
+            "filename": "/assets/shop/weapons/0x3AABBBAA.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":984333226
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 2,
+        "fields": {
+            "section": 1,
+            "title_display_name": "EQ_TEST_WEAPON_TITLE",
+            "sub_section": null,
+            "filename": "/assets/shop/weapons/0x9D07F764.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":2634544996
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 3,
+        "fields": {
+            "section": 1,
+            "title_display_name": "EQ_TEST_WEAPON_TITLE",
+            "sub_section": null,
+            "filename": "/assets/shop/weapons/0x476BF155.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":1198256469
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 4,
+        "fields": {
+            "section": 1,
+            "title_display_name": "EQ_TEST_WEAPON_TITLE",
+            "sub_section": null,
+            "filename": "/assets/shop/weapons/0x47757124.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":1198256469
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 5,
+        "fields": {
+            "section": 1,
+            "title_display_name": "EQ_TEST_WEAPON_TITLE",
+            "sub_section": null,
+            "filename": "/assets/shop/weapons/0xAF113F99.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":2937143193
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 6,
+        "fields": {
+            "section": 1,
+            "title_display_name": "EQ_TEST_WEAPON_TITLE",
+            "sub_section": null,
+            "filename": "/assets/shop/weapons/0xAF3696A1.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":2939590305
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 7,
+        "fields": {
+            "section": 1,
+            "title_display_name": "EQ_TEST_WEAPON_TITLE",
+            "sub_section": null,
+            "filename": "/assets/shop/weapons/0xEFE7E2DF.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":4024951519
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 8,
+        "fields": {
+            "section": 1,
+            "title_display_name": "EQ_TEST_WEAPON_TITLE",
+            "sub_section": null,
+            "filename": "/assets/shop/weapons/0xFDBC8A50.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":4256991824
+        }
+    }
+]
