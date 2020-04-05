@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.http import Http404
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from apilogic.serializers import PlayersSpawnsSerializer, ShopTabDataLazySerializer, ShopTabDataSerializer, DerbyArenasSerializer, HideandseekArenasSerializer, RaceArenasSerializer, TdmArenasSerializer, PlayersSerializer, SettingsSerializer, DmArenasSerializer, HeavyDmArenasSerializer, SniperArenasSerializer, OneShootArenasSerializer
-from apilogic.models import DerbyArenas, ShopEntities, ShopTabData, Ranks, HideandseekArenas, RaceArenas, TdmArenas, DmArenas, HeavyDmArenas, SniperArenas, OneShootArenas, PlayersSpawns, Players, Settings
+from apilogic.serializers import PlayersSpawnsSerializer,PlayersItemsSerializer, ShopTabDataLazySerializer, ShopTabDataSerializer, DerbyArenasSerializer, HideandseekArenasSerializer, RaceArenasSerializer, TdmArenasSerializer, PlayersSerializer, SettingsSerializer, DmArenasSerializer, HeavyDmArenasSerializer, SniperArenasSerializer, OneShootArenasSerializer
+from apilogic.models import PlayersItems, DerbyArenas, ShopEntities, ShopTabData, Ranks, HideandseekArenas, RaceArenas, TdmArenas, DmArenas, HeavyDmArenas, SniperArenas, OneShootArenas, PlayersSpawns, Players, Settings
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from random import randint
@@ -76,12 +76,22 @@ class PlayersAPI(generics.GenericAPIView):
     
     def post(self, request, action):
         data = request.data
+        if action == 'equip':
+            if 'item_id' in data and 'player_id' in data and len(data['item_id']) > 0 and len(data['player_id']) > 0:
+                player_item = PlayersItems.objects.filter(item=int(data['item_id']), player=int(data['player_id'])).first()
+                if player_item is not None:
+                    player_item.equipped = player_item.equipped is not True
+                    player_item.save()
+                    player_items = PlayersItems.objects.filter(player=int(data['player_id'])).all()
+                    if player_item.item.section is not None and player_item.equipped is True:
+                        PlayersItems.objects.filter(player=int(data['player_id']), item__section__name=player_item.item.section.name).exclude(pk=player_item.id).update(equipped=False)
+                    return Response(PlayersItemsSerializer(player_items, many=True).data)
+                return Response(0)
         if action == 'play_as_guest':
             if 'login' in data:
                 player_with_this_login = Players.objects.filter(login=data['login']).first()
-                print(player_with_this_login)
                 if player_with_this_login is not None:
-                    return Response(1)
+                    return Response().all()
                 return Response(0)
 
         if action == 'login':

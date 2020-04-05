@@ -2,8 +2,21 @@ from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from apilogic.models import DerbyArenas, DerbyArenasSpawns, DmArenas, DmArenasSpawns, DmArenasWeapons, HeavyDmArenas, HeavyDmArenasSpawns, HeavyDmArenasWeapons, HideandseekArenas, HideandseekArenasSpawns
 from apilogic.models import Ranks, OneShootArenas, OneShootArenasSpawns, OneShootArenasWeapons, Players, PlayersSpawns, RaceArenas, RaceArenasCheckpoints, RaceArenasSpawns, Settings, SniperArenas, TdmArenas, TdmArenasSpawns, TdmArenasWeapons
-from apilogic.models import ShopEntities, ShopTabFilterData, ShopTabData
+from apilogic.models import ShopEntities, ShopTabFilterData, ShopTabData, Items, PlayersItems, ItemsSections
 
+class ItemsSectionsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ItemsSections
+        fields = '__all__'
+
+class ItemsSerializer(serializers.ModelSerializer):
+    section = ItemsSectionsSerializer(
+        many=False,
+        read_only=True
+    )
+    class Meta:
+        model = Items
+        fields = '__all__'
 
 class DerbyArenasSpawnsSerializer(serializers.ModelSerializer):
     class Meta:
@@ -107,14 +120,28 @@ class RanksSerializer(serializers.ModelSerializer):
         model = Ranks
         fields = '__all__'
 
+class PlayersItemsSerializer(serializers.ModelSerializer):
+    item = ItemsSerializer(
+        many=False,
+        read_only=True
+    )
+    class Meta:
+        model = PlayersItems
+        fields = ['item', 'equipped', 'date_expire']
+        
 class PlayersSerializer(serializers.ModelSerializer):
     rank = RanksSerializer(
         many=False,
         read_only=True,
     )
+    player_items = PlayersItemsSerializer(
+        many=True,
+        read_only=True
+    )
     class Meta:
         model = Players
         fields = '__all__'
+
 
 class PlayersSpawnsSerializer(serializers.ModelSerializer):
     class Meta:
