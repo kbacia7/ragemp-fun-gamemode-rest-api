@@ -220,6 +220,12 @@ class BuyAPI(generics.GenericAPIView):
                         item_id = None
                         if item is not None:
                             item_id = item.id
+                        if item_id is not None:
+                            player_item = PlayersItems.objects.filter(item=int(item_id), player=int(data['player_id'])).first()
+                            if player_item is not None:
+                                response_code = 3
+                        if response_code == 0:
+                            player.save()
                         return Response({
                             'code': response_code,
                             'tab_name': shop_entity.filter.tab.name,
