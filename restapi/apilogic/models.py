@@ -16,11 +16,11 @@ class ItemsSections(models.Model):
 class Items(models.Model):
     section = models.ForeignKey(ItemsSections, models.DO_NOTHING, null=True, related_name="items")
     title_display_name =  models.CharField(max_length=64)
-    sub_section = models.CharField(max_length=32)
+    sub_section = models.CharField(max_length=32, null=True)
     filename = models.CharField(max_length=50)
     description = models.TextField()
     days_to_expire = models.IntegerField(null=True)
-    ragemp_item_id = models.IntegerField(null=True)
+    ragemp_item_id = models.PositiveIntegerField(null=True)
     class Meta:
         db_table = 'items'
 

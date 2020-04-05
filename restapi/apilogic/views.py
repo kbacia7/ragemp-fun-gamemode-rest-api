@@ -3,7 +3,7 @@ from django.http import Http404
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from apilogic.serializers import PlayersSpawnsSerializer,PlayersItemsSerializer, ShopTabDataLazySerializer, ShopTabDataSerializer, DerbyArenasSerializer, HideandseekArenasSerializer, RaceArenasSerializer, TdmArenasSerializer, PlayersSerializer, SettingsSerializer, DmArenasSerializer, HeavyDmArenasSerializer, SniperArenasSerializer, OneShootArenasSerializer
-from apilogic.models import PlayersItems, DerbyArenas, ShopEntities, ShopTabData, Ranks, HideandseekArenas, RaceArenas, TdmArenas, DmArenas, HeavyDmArenas, SniperArenas, OneShootArenas, PlayersSpawns, Players, Settings
+from apilogic.models import Items, PlayersItems, DerbyArenas, ShopEntities, ShopTabData, Ranks, HideandseekArenas, RaceArenas, TdmArenas, DmArenas, HeavyDmArenas, SniperArenas, OneShootArenas, PlayersSpawns, Players, Settings
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from random import randint
@@ -76,6 +76,14 @@ class PlayersAPI(generics.GenericAPIView):
     
     def post(self, request, action):
         data = request.data
+        if action == 'give_item':
+            print(data)
+            if 'item_id' in data and 'player_id' in data and len(data['item_id']) > 0 and len(data['player_id']) > 0:
+                new_player_item = PlayersItems(item=Items.objects.get(pk=int(data['item_id'])), player=Players.objects.get(pk=int(data['player_id'])), equipped=False)
+                new_player_item.save()
+                player_items = PlayersItems.objects.filter(player=int(data['player_id'])).all()
+                return Response(PlayersItemsSerializer(player_items, many=True).data)
+
         if action == 'equip':
             if 'item_id' in data and 'player_id' in data and len(data['item_id']) > 0 and len(data['player_id']) > 0:
                 player_item = PlayersItems.objects.filter(item=int(data['item_id']), player=int(data['player_id'])).first()
@@ -83,7 +91,7 @@ class PlayersAPI(generics.GenericAPIView):
                     player_item.equipped = player_item.equipped is not True
                     player_item.save()
                     player_items = PlayersItems.objects.filter(player=int(data['player_id'])).all()
-                    if player_item.item.section is not None and player_item.equipped is True:
+                    if player_item.item.sub_section is not None and player_item.equipped is True:
                         PlayersItems.objects.filter(player=int(data['player_id']), item__section__name=player_item.item.section.name).exclude(pk=player_item.id).update(equipped=False)
                     return Response(PlayersItemsSerializer(player_items, many=True).data)
                 return Response(0)
@@ -208,11 +216,16 @@ class BuyAPI(generics.GenericAPIView):
                                     player.diamonds -= shop_entity.diamonds
                                     cost = shop_entity.diamonds
                                     response_code = 0
+                        item = shop_entity.item
+                        item_id = None
+                        if item is not None:
+                            item_id = item.id
                         return Response({
                             'code': response_code,
                             'tab_name': shop_entity.filter.tab.name,
                             'cost': cost,
-                            'ragemp_item_id': shop_entity.ragemp_item_id
+                            'ragemp_item_id': shop_entity.ragemp_item_id,
+                            'item_id': item_id
                         })
         return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
