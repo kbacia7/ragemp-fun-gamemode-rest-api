@@ -12,7 +12,7 @@
         "pk": 2,
         "fields": {
             "name": "skin_spawn",
-            "column_size": 2
+            "column_size": 3
         }
     },
     {

@@ -8,7 +8,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 233415434
+            "ragemp_item_id": null,
+            "item": 9
         }
     },
     {
@@ -20,8 +21,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 1011059922
-
+            "ragemp_item_id": null,
+            "item": 10
         }
     },
     {
@@ -33,7 +34,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 1299047806
+            "ragemp_item_id": null,
+            "item": 11
         }
     },
     {
@@ -45,7 +47,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 1302784073
+            "ragemp_item_id": null,
+            "item": 12
         }
     },
     {
@@ -57,8 +60,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 2372398717
-
+            "ragemp_item_id": null,
+            "item": 13
         }
     },
     {
@@ -70,7 +73,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 666718676
+            "ragemp_item_id": null,
+            "item": 14
         }
     },
     {
@@ -82,7 +86,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 1074457665
+            "ragemp_item_id": null,
+            "item": 15
         }
     },
     {
@@ -94,7 +99,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 2040438510
+            "ragemp_item_id": null,
+            "item": 16
         }
     },
     {
@@ -106,7 +112,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 1952555184
+            "ragemp_item_id": null,
+            "item": 17
         }
     },
     {
@@ -118,7 +125,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 1380197501
+            "ragemp_item_id": null,
+            "item": 18
         }
     },
     {
@@ -130,7 +138,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 943915367
+            "ragemp_item_id": null,
+            "item": 19
         }
     },
     {
@@ -142,7 +151,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 2705543429
+            "ragemp_item_id": null,
+            "item": 20
         }
     },
     {
@@ -154,7 +164,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 2905870170
+            "ragemp_item_id": null,
+            "item": 21
         }
     },
     {
@@ -166,7 +177,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 3065114024
+            "ragemp_item_id": null,
+            "item": 22
         }
     },
     {
@@ -178,7 +190,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 3118269184
+            "ragemp_item_id": null,
+            "item": 23
         }
     },
     {
@@ -190,7 +203,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 3459037009
+            "ragemp_item_id": null,
+            "item": 24
         }
     },
     {
@@ -202,7 +216,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 3499148112
+            "ragemp_item_id": null,
+            "item": 25
         }
     },
     {
@@ -214,7 +229,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 3882958867
+            "ragemp_item_id": null,
+            "item": 26
         }
     },
     {
@@ -226,7 +242,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 4121954205
+            "ragemp_item_id": null,
+            "item": 27
 
         }
     },
@@ -239,7 +256,8 @@
             "money": 0,
             "diamonds": 0,
             "display_name": null,
-            "ragemp_item_id": 4227433577
+            "ragemp_item_id": null,
+            "item": 28
         }
     }
 ]

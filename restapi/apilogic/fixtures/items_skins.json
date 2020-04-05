@@ -1,0 +1,263 @@
+[
+    {
+        "model": "apilogic.Items",
+        "pk": 9,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0x0DE9A30A.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":984333226
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 10,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0x3C438CD2.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":1011059922
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 11,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0x4D6DE57E.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":1299047806
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 12,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0x4DA6E849.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":1302784073
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 13,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0x8D67EE7D.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":2372398717
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 14,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0x27BD51D4.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":666718676
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 15,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0x400AEC41.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":1074457665
+
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 16,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0x799E9EEE.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":2040438510
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 17,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0x7461A0B0.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":1952555184
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 18,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0x5244247D.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":1380197501
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 19,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0x38430167.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":943915367
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 20,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0xA1435105.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":2705543429
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 21,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0xAD340F5A.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":2905870170
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 22,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0xB6B1EDA8.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":3065114024
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 23,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0xB9DD0300.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":3118269184
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 24,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0xCE2CB751.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":3459037009
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 25,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0xD090C350.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":3499148112
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 26,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0xE7714013.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":3882958867
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 27,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0xF5B0079D.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":4121954205
+        }
+    },
+    {
+        "model": "apilogic.Items",
+        "pk": 28,
+        "fields": {
+            "section": 2,
+            "title_display_name": "EQ_TEST_SKIN_TITLE",
+            "sub_section": "skins",
+            "filename": "/assets/shop/skins/0xFBF98469.png",
+            "description": "AA",
+            "days_to_expire": null,
+            "ragemp_item_id":4227433577
+        }
+    }
+]

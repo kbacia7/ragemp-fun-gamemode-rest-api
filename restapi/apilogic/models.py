@@ -162,7 +162,6 @@ class Players(models.Model):
     kills = models.IntegerField(blank=True, default=0)
     password = models.CharField(max_length=255)
     email = models.CharField(max_length=50)
-    ped = models.IntegerField()
     money = models.IntegerField()
     diamonds = models.IntegerField()
 
