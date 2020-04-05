@@ -1,0 +1,26 @@
+[
+    {
+        "model": "apilogic.ItemsSections",
+        "pk": 1,
+        "fields": {
+            "name": "weapon",
+            "column_size": 2
+        }
+    },
+    {
+        "model": "apilogic.ItemsSections",
+        "pk": 2,
+        "fields": {
+            "name": "skin_spawn",
+            "column_size": 3
+        }
+    },
+    {
+        "model": "apilogic.ItemsSections",
+        "pk": 3,
+        "fields": {
+            "name": "utils",
+            "column_size": 2
+        }
+    }
+]
