@@ -7,6 +7,22 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
+class ItemsSections(models.Model): 
+    name = models.CharField(max_length=64)
+    column_size = models.DecimalField(max_digits=2, decimal_places=1, default=1)
+    class Meta:
+        db_table = 'items_sections'
+
+class Items(models.Model):
+    section = models.ForeignKey(ItemsSections, models.DO_NOTHING, null=True, related_name="items")
+    title_display_name =  models.CharField(max_length=64)
+    sub_section = models.CharField(max_length=32)
+    filename = models.CharField(max_length=50)
+    description = models.TextField()
+    days_to_expire = models.IntegerField(null=True)
+    ragemp_item_id = models.IntegerField(null=True)
+    class Meta:
+        db_table = 'items'
 
 class DerbyArenas(models.Model):
     name = models.CharField(max_length=50)
@@ -139,6 +155,7 @@ class Ranks(models.Model):
         db_table = 'ranks'
 
 class Players(models.Model):
+    items = models.ManyToManyField(Items, related_name="items", through='PlayersItems')
     login = models.CharField(max_length=35)
     rank = models.ForeignKey(Ranks, models.DO_NOTHING, null=True)
     deaths = models.IntegerField(blank=True, default=0)
@@ -151,6 +168,14 @@ class Players(models.Model):
 
     class Meta:
         db_table = 'players'
+
+class PlayersItems(models.Model):
+    player = models.ForeignKey(Players, on_delete=models.CASCADE, related_name="player_items")
+    item = models.ForeignKey(Items, on_delete=models.CASCADE)
+    equipped = models.BooleanField(null=False, default=True)
+    date_expire = models.DateTimeField(null=True)
+    class Meta:
+        db_table = 'players_items'
 
 class PlayersSpawns(models.Model):
     x = models.DecimalField(max_digits=35, decimal_places=25)
@@ -279,11 +304,12 @@ class ShopTabFilterData(models.Model):
         
 class ShopEntities(models.Model):
     filter = models.ForeignKey(ShopTabFilterData, models.DO_NOTHING, null=False, related_name="entities")
-    filename = models.CharField(max_length=50)
-    ragemp_item_id = models.PositiveIntegerField(null=False)
+    item = models.ForeignKey(Items, models.CASCADE, null=True)
+    filename = models.CharField(max_length=50, null=True)
+    ragemp_item_id = models.PositiveIntegerField(null=True)
     money = models.IntegerField(null=True)
     diamonds = models.IntegerField(null=True)
     display_name = models.CharField(max_length=64, null=True)
+
     class Meta:
         db_table = 'shop_entities'
-
