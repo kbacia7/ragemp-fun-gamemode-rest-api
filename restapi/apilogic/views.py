@@ -119,17 +119,20 @@ class PlayersAPI(generics.GenericAPIView):
                     return Response(2)
                 default_rank_setting = Settings.objects.filter(name='default_rank_id').first()
                 rank = Ranks.objects.filter(pk=int(default_rank_setting.value)).first()
-                Players(
+                player = Players(
                     login=data['login'],
                     password=data['password'],
                     email=data['email'],
                     deaths=0,
                     kills=0,
-                    ped=0,
                     rank=rank,
                     money=1000,
                     diamonds=5
-                ).save()
+                )
+                player.save()
+                item_skin = Items.objects.filter(section__name="skin_spawn").first()
+                new_player_item = PlayersItems(item=item_skin, player=player, equipped=True)
+                new_player_item.save()
                 return Response(0)
 
         if action == 'save':
