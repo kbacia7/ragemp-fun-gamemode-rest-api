@@ -28,17 +28,17 @@ class DerbyArenas(models.Model):
     name = models.CharField(max_length=50)
     author = models.CharField(max_length=50)
     vehicle_model = models.IntegerField(db_column='vehicle_model', default=0)  # Field name made lowercase.
-    height_limit = models.DecimalField(db_column='height_limit', max_digits=35, decimal_places=25, default=0)  # Field name made lowercase.
+    height_limit = models.DecimalField(db_column='height_limit', max_digits=10, decimal_places=4, default=0)  # Field name made lowercase.
     class Meta:
         db_table = 'derby_arenas'
 
 
 class DerbyArenasSpawns(models.Model):
     arena = models.ForeignKey('DerbyArenas', models.DO_NOTHING, null=True, related_name="spawns")  # Field name made lowercase.
-    x = models.DecimalField(max_digits=35, decimal_places=25)
-    y = models.DecimalField(max_digits=35, decimal_places=25)
-    z = models.DecimalField(max_digits=35, decimal_places=25)
-    rotation = models.DecimalField(max_digits=35, decimal_places=25)
+    x = models.DecimalField(max_digits=10, decimal_places=4)
+    y = models.DecimalField(max_digits=10, decimal_places=4)
+    z = models.DecimalField(max_digits=10, decimal_places=4)
+    rotation = models.DecimalField(max_digits=10, decimal_places=4)
 
     class Meta:
         db_table = 'derby_arenas_spawns'
@@ -55,9 +55,9 @@ class DmArenas(models.Model):
 
 class DmArenasSpawns(models.Model):
     arena = models.ForeignKey(DmArenas, models.DO_NOTHING, null=True, related_name="spawns")  # Field name made lowercase.
-    x = models.DecimalField(max_digits=35, decimal_places=25)
-    y = models.DecimalField(max_digits=35, decimal_places=25)
-    z = models.DecimalField(max_digits=35, decimal_places=25)
+    x = models.DecimalField(max_digits=10, decimal_places=4)
+    y = models.DecimalField(max_digits=10, decimal_places=4)
+    z = models.DecimalField(max_digits=10, decimal_places=4)
 
     class Meta:
         db_table = 'dm_arenas_spawns'
@@ -83,9 +83,9 @@ class HeavyDmArenas(models.Model):
 
 class HeavyDmArenasSpawns(models.Model):
     arena = models.ForeignKey(HeavyDmArenas, models.DO_NOTHING, null=True, related_name="spawns")  # Field name made lowercase.
-    x = models.DecimalField(max_digits=35, decimal_places=25)
-    y = models.DecimalField(max_digits=35, decimal_places=25)
-    z = models.DecimalField(max_digits=35, decimal_places=25)
+    x = models.DecimalField(max_digits=10, decimal_places=4)
+    y = models.DecimalField(max_digits=10, decimal_places=4)
+    z = models.DecimalField(max_digits=10, decimal_places=4)
 
     class Meta:
         db_table = 'heavy_dm_arenas_spawns'
@@ -103,9 +103,9 @@ class HeavyDmArenasWeapons(models.Model):
 class HideandseekArenas(models.Model):
     name = models.CharField(max_length=50)
     author = models.CharField(max_length=50)
-    looking_x = models.DecimalField(db_column='looking_x', max_digits=35, decimal_places=25)  # Field name made lowercase.
-    looking_y = models.DecimalField(db_column='looking_y', max_digits=35, decimal_places=25)  # Field name made lowercase.
-    looking_z = models.DecimalField(db_column='looking_z', max_digits=35, decimal_places=25)  # Field name made lowercase.
+    looking_x = models.DecimalField(db_column='looking_x', max_digits=10, decimal_places=4)  # Field name made lowercase.
+    looking_y = models.DecimalField(db_column='looking_y', max_digits=10, decimal_places=4)  # Field name made lowercase.
+    looking_z = models.DecimalField(db_column='looking_z', max_digits=10, decimal_places=4)  # Field name made lowercase.
 
     class Meta:
         db_table = 'hideandseek_arenas'
@@ -113,9 +113,9 @@ class HideandseekArenas(models.Model):
 
 class HideandseekArenasSpawns(models.Model):
     arena = models.ForeignKey(HideandseekArenas, models.DO_NOTHING, null=True, related_name="spawns")  # Field name made lowercase.
-    x = models.DecimalField(max_digits=35, decimal_places=25)
-    y = models.DecimalField(max_digits=35, decimal_places=25)
-    z = models.DecimalField(max_digits=35, decimal_places=25)
+    x = models.DecimalField(max_digits=10, decimal_places=4)
+    y = models.DecimalField(max_digits=10, decimal_places=4)
+    z = models.DecimalField(max_digits=10, decimal_places=4)
 
     class Meta:
         db_table = 'hideandseek_arenas_spawns'
@@ -132,9 +132,9 @@ class OneShootArenas(models.Model):
 
 class OneShootArenasSpawns(models.Model):
     arena = models.ForeignKey(OneShootArenas, models.DO_NOTHING, null=True, related_name="spawns")  # Field name made lowercase.
-    x = models.DecimalField(max_digits=35, decimal_places=25)
-    y = models.DecimalField(max_digits=35, decimal_places=25)
-    z = models.DecimalField(max_digits=35, decimal_places=25)
+    x = models.DecimalField(max_digits=10, decimal_places=4)
+    y = models.DecimalField(max_digits=10, decimal_places=4)
+    z = models.DecimalField(max_digits=10, decimal_places=4)
 
     class Meta:
         db_table = 'one_shoot_arenas_spawns'
@@ -177,9 +177,9 @@ class PlayersItems(models.Model):
         db_table = 'players_items'
 
 class PlayersSpawns(models.Model):
-    x = models.DecimalField(max_digits=35, decimal_places=25)
-    y = models.DecimalField(max_digits=35, decimal_places=25)
-    z = models.DecimalField(max_digits=35, decimal_places=25)
+    x = models.DecimalField(max_digits=10, decimal_places=4)
+    y = models.DecimalField(max_digits=10, decimal_places=4)
+    z = models.DecimalField(max_digits=10, decimal_places=4)
 
     class Meta:
         db_table = 'players_spawns'
@@ -195,9 +195,9 @@ class RaceArenas(models.Model):
 
 class RaceArenasCheckpoints(models.Model):
     arena = models.ForeignKey(RaceArenas, models.DO_NOTHING, null=True, related_name="checkpoints")  # Field name made lowercase.
-    x = models.DecimalField(max_digits=35, decimal_places=25)
-    y = models.DecimalField(max_digits=35, decimal_places=25)
-    z = models.DecimalField(max_digits=35, decimal_places=25)
+    x = models.DecimalField(max_digits=10, decimal_places=4)
+    y = models.DecimalField(max_digits=10, decimal_places=4)
+    z = models.DecimalField(max_digits=10, decimal_places=4)
 
     class Meta:
         db_table = 'races_arenas_checkpoints'
@@ -205,11 +205,11 @@ class RaceArenasCheckpoints(models.Model):
 
 class RaceArenasSpawns(models.Model):
     arena = models.ForeignKey(RaceArenas, models.DO_NOTHING, null=True, related_name="spawns")  # Field name made lowercase.
-    x = models.DecimalField(max_digits=35, decimal_places=25)
-    y = models.DecimalField(max_digits=35, decimal_places=25)
-    z = models.DecimalField(max_digits=35, decimal_places=25)
-    vehicle_model = models.IntegerField()  # Field name made lowercase.
-    rotation = models.DecimalField(max_digits=35, decimal_places=25)
+    x = models.DecimalField(max_digits=10, decimal_places=4)
+    y = models.DecimalField(max_digits=10, decimal_places=4)
+    z = models.DecimalField(max_digits=10, decimal_places=4)
+    vehicle_model = models.PositiveIntegerField()  # Field name made lowercase.
+    rotation = models.DecimalField(max_digits=10, decimal_places=4)
 
     class Meta:
         db_table = 'races_arenas_spawns'
@@ -235,9 +235,9 @@ class SniperArenas(models.Model):
 
 class SniperArenasSpawns(models.Model):
     arena = models.ForeignKey(SniperArenas, models.DO_NOTHING, null=True, related_name="spawns")  # Field name made lowercase.
-    x = models.DecimalField(max_digits=35, decimal_places=25)
-    y = models.DecimalField(max_digits=35, decimal_places=25)
-    z = models.DecimalField(max_digits=35, decimal_places=25)
+    x = models.DecimalField(max_digits=10, decimal_places=4)
+    y = models.DecimalField(max_digits=10, decimal_places=4)
+    z = models.DecimalField(max_digits=10, decimal_places=4)
 
     class Meta:
         db_table = 'sniper_arenas_spawns'
@@ -262,9 +262,9 @@ class TdmArenas(models.Model):
 
 class TdmArenasSpawns(models.Model):
     arena = models.ForeignKey(TdmArenas, models.DO_NOTHING, null=True, related_name="spawns")  # Field name made lowercase.
-    x = models.DecimalField(max_digits=35, decimal_places=25)
-    y = models.DecimalField(max_digits=35, decimal_places=25)
-    z = models.DecimalField(max_digits=35, decimal_places=25)
+    x = models.DecimalField(max_digits=10, decimal_places=4)
+    y = models.DecimalField(max_digits=10, decimal_places=4)
+    z = models.DecimalField(max_digits=10, decimal_places=4)
     team = models.PositiveIntegerField()
 
     class Meta:
