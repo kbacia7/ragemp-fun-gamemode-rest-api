@@ -240,10 +240,12 @@ class LootboxAPI(generics.ListAPIView):
     def get_queryset(self):
         action = self.kwargs['action']
         lootbox_id = int(self.kwargs['lootbox_id'])
-        lootbox = Lootboxes.objects.filter(pk=lootbox_id).first()
+        lootbox = Lootboxes.objects.filter(item=lootbox_id).first()
+        if lootbox is None:
+            raise Http404()
         if action == "list":
             return [lootbox]
-        lootbox_items = LootboxItems.objects.filter(lootbox=lootbox_id).all()
+        lootbox_items = LootboxItems.objects.filter(lootbox=lootbox.id).all()
         all_available_chances = []
         n = secrets.randbelow(lootbox.max_chance)
         a = 0
