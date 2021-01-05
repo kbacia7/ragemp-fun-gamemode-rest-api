@@ -2,7 +2,7 @@ from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from apilogic.models import DerbyArenas, DerbyArenasSpawns, DmArenas, DmArenasSpawns, DmArenasWeapons, HeavyDmArenas, HeavyDmArenasSpawns, HeavyDmArenasWeapons, HideandseekArenas, HideandseekArenasSpawns
 from apilogic.models import Ranks, OneShootArenas, OneShootArenasSpawns, OneShootArenasWeapons, Players, PlayersSpawns, RaceArenas, RaceArenasCheckpoints, RaceArenasSpawns, Settings, SniperArenas, TdmArenas, TdmArenasSpawns, TdmArenasWeapons
-from apilogic.models import ShopEntities, ShopTabFilterData, ShopTabData, Items, PlayersItems, ItemsSections
+from apilogic.models import ShopEntities, ShopTabFilterData, ShopTabData, Items, PlayersItems, ItemsSections, Lootboxes, LootboxItems
 
 class ItemsSectionsSerializer(serializers.ModelSerializer):
     class Meta:
@@ -128,6 +128,7 @@ class PlayersItemsSerializer(serializers.ModelSerializer):
     class Meta:
         model = PlayersItems
         fields = ['item', 'equipped', 'date_expire']
+        
         
 class PlayersSerializer(serializers.ModelSerializer):
     rank = RanksSerializer(
@@ -273,3 +274,21 @@ class ShopTabDataLazySerializer(serializers.ModelSerializer):
         fields = super(ShopTabDataLazySerializer, self).get_fields()
         fields['subcategories'] = ShopTabDataLazySerializer(many=True)
         return fields
+
+class LootboxItemsSerializer(serializers.ModelSerializer):
+    item = ItemsSerializer(
+        many=False,
+        read_only=True
+    )
+    class Meta:
+        model = LootboxItems
+        fields = ['item', 'chance']
+
+class LootboxesSerializer(serializers.ModelSerializer):
+    lootbox_items = LootboxItemsSerializer(
+        many=True,
+        read_only=True
+    )
+    class Meta:
+        model = Lootboxes
+        fields = '__all__'
