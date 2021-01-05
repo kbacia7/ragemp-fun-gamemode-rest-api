@@ -21,6 +21,7 @@ class Items(models.Model):
     description = models.TextField()
     days_to_expire = models.IntegerField(null=True)
     ragemp_item_id = models.PositiveIntegerField(null=True)
+
     class Meta:
         db_table = 'items'
 
@@ -29,6 +30,7 @@ class DerbyArenas(models.Model):
     author = models.CharField(max_length=50)
     vehicle_model = models.IntegerField(db_column='vehicle_model', default=0)  # Field name made lowercase.
     height_limit = models.DecimalField(db_column='height_limit', max_digits=10, decimal_places=4, default=0)  # Field name made lowercase.
+
     class Meta:
         db_table = 'derby_arenas'
 
@@ -312,3 +314,19 @@ class ShopEntities(models.Model):
 
     class Meta:
         db_table = 'shop_entities'
+
+class Lootboxes(models.Model):
+    item = models.ForeignKey(Items, models.CASCADE, null=False)
+    items = models.ManyToManyField(Items, related_name="lootbox_items", through='LootboxItems')
+    max_chance = models.SmallIntegerField(null=False)
+
+    class Meta:
+        db_table = 'lootboxes'
+
+class LootboxItems(models.Model):
+    lootbox = models.ForeignKey(Lootboxes, on_delete=models.CASCADE, related_name="lootbox_items")
+    item = models.ForeignKey(Items, on_delete=models.CASCADE)
+    chance = models.SmallIntegerField(null=False)
+
+    class Meta:
+        db_table = 'lootbox_items'
