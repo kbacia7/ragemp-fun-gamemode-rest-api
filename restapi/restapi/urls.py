@@ -30,7 +30,7 @@ urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^events/(?P<event>.+)/$', EventsAPI.as_view()),
     url(r'^arenas/(?P<arena>.+)/$', ArenasAPI.as_view()),
-    url(r'^lootboxes/(?P<action>.+)/(?P<lootbox_id>.+)/$', LootboxAPI.as_view()),
+    url(r'^lootboxes/(?P<action>.+)/(?P<player_id>.+)/(?P<lootbox_id>.+)/$', LootboxAPI.as_view()),
     url(r'^players/(?P<action>.+)/$', PlayersAPI.as_view()),
     url(r'^settings/(?P<name>.+)/$', SettingsAPI.as_view()),
     url(r'^shop/(?P<tab>.+)/$', ShopAPI.as_view()),

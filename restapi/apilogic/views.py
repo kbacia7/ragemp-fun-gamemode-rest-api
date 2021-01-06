@@ -239,8 +239,12 @@ class BuyAPI(generics.GenericAPIView):
 class LootboxAPI(generics.ListAPIView):
     def get_queryset(self):
         action = self.kwargs['action']
-        lootbox_id = int(self.kwargs['lootbox_id'])
-        lootbox = Lootboxes.objects.filter(item=lootbox_id).first()
+        lootbox_item_id = int(self.kwargs['lootbox_id'])
+        player_id =  int(self.kwargs['player_id'])
+        player_item = PlayersItems.objects.filter(player=player_id, item=lootbox_item_id).first()
+        if player_item is None:
+            raise Http404()
+        lootbox = Lootboxes.objects.filter(item=lootbox_item_id).first()
         if lootbox is None:
             raise Http404()
         if action == "list":
@@ -260,6 +264,8 @@ class LootboxAPI(generics.ListAPIView):
             raise Exception()
         for item in all_available_chances:
             if item['min'] <= n and item['max'] >= n:
+                new_player_item = PlayersItems(item_id=item['item'].id, player_id=player_id, equipped=False)
+                new_player_item.save()
                 return [item['item']]
             
     def get_serializer_class(self):
