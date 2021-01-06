@@ -266,6 +266,7 @@ class LootboxAPI(generics.ListAPIView):
             if item['min'] <= n and item['max'] >= n:
                 new_player_item = PlayersItems(item_id=item['item'].id, player_id=player_id, equipped=False)
                 new_player_item.save()
+                player_item.delete()
                 return [item['item']]
             
     def get_serializer_class(self):
