@@ -2,8 +2,9 @@ from django.shortcuts import render
 from django.http import Http404
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from apilogic.serializers import PlayersSpawnsSerializer,PlayersItemsSerializer, ShopTabDataLazySerializer, ShopTabDataSerializer, DerbyArenasSerializer, HideandseekArenasSerializer, RaceArenasSerializer, TdmArenasSerializer, PlayersSerializer, SettingsSerializer, DmArenasSerializer, HeavyDmArenasSerializer, SniperArenasSerializer, OneShootArenasSerializer
-from apilogic.models import Items, PlayersItems, DerbyArenas, ShopEntities, ShopTabData, Ranks, HideandseekArenas, RaceArenas, TdmArenas, DmArenas, HeavyDmArenas, SniperArenas, OneShootArenas, PlayersSpawns, Players, Settings
+import secrets
+from apilogic.serializers import PlayersSpawnsSerializer,PlayersItemsSerializer, ItemsSerializer, ShopTabDataLazySerializer, ShopTabDataSerializer, DerbyArenasSerializer, HideandseekArenasSerializer, RaceArenasSerializer, TdmArenasSerializer, LootboxesSerializer, LootboxItemsSerializer, PlayersSerializer, SettingsSerializer, DmArenasSerializer, HeavyDmArenasSerializer, SniperArenasSerializer, OneShootArenasSerializer
+from apilogic.models import Items, PlayersItems, DerbyArenas, ShopEntities, ShopTabData, Ranks, HideandseekArenas, RaceArenas, TdmArenas, DmArenas, HeavyDmArenas, SniperArenas, OneShootArenas, PlayersSpawns, Players, Settings, Lootboxes, LootboxItems
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from random import randint
@@ -104,7 +105,6 @@ class PlayersAPI(generics.GenericAPIView):
 
         if action == 'login':
             if 'login' in data:
-                print(data)
                 player = Players.objects.filter(login=data['login']).first()
                 if player is not None:
                     return Response(PlayersSerializer(player).data)            
@@ -190,9 +190,7 @@ class ShopAPI(generics.ListAPIView):
 class BuyAPI(generics.GenericAPIView):    
     def post(self, request):
         data = request.data
-        print(data)
         is_guest = data['player_id'] == "0"
-        print(is_guest)
         if data['buy_in'] is not None and len(data['buy_in']) > 0:
             if int(data['item_id']) is not None and int(data['item_id']) > 0 and data['currency'] is not None and len(data['currency']) > 0:
                 if data['buy_in'] == 'shop':
@@ -238,3 +236,42 @@ class BuyAPI(generics.GenericAPIView):
                         })
         return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
+class LootboxAPI(generics.ListAPIView):
+    def get_queryset(self):
+        action = self.kwargs['action']
+        lootbox_item_id = int(self.kwargs['lootbox_id'])
+        player_id =  int(self.kwargs['player_id'])
+        player_item = PlayersItems.objects.filter(player=player_id, item=lootbox_item_id).first()
+        if player_item is None:
+            raise Http404()
+        lootbox = Lootboxes.objects.filter(item=lootbox_item_id).first()
+        if lootbox is None:
+            raise Http404()
+        if action == "list":
+            return [lootbox]
+        lootbox_items = LootboxItems.objects.filter(lootbox=lootbox.id).all()
+        all_available_chances = []
+        n = secrets.randbelow(lootbox.max_chance)
+        a = 0
+        for lootbox_item in lootbox_items:
+            all_available_chances.append({
+                'min': a,
+                'max': a + lootbox_item.chance,
+                'item': lootbox_item.item
+            })
+            a += lootbox_item.chance
+        if a != lootbox.max_chance:
+            raise Exception()
+        for item in all_available_chances:
+            if item['min'] <= n and item['max'] >= n:
+                new_player_item = PlayersItems(item_id=item['item'].id, player_id=player_id, equipped=False)
+                new_player_item.save()
+                player_item.delete()
+                return [item['item']]
+            
+    def get_serializer_class(self):
+        action = self.kwargs['action']
+        if action == "open":
+            return ItemsSerializer
+        else:
+            return LootboxesSerializer
