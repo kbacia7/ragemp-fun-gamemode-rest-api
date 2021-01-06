@@ -330,3 +330,27 @@ class LootboxItems(models.Model):
 
     class Meta:
         db_table = 'lootbox_items'
+
+class Objects(models.Model):
+    x = models.DecimalField(max_digits=10, decimal_places=4)
+    y = models.DecimalField(max_digits=10, decimal_places=4)
+    z = models.DecimalField(max_digits=10, decimal_places=4)
+    rot_x = models.DecimalField(max_digits=10, decimal_places=4)
+    rot_y = models.DecimalField(max_digits=10, decimal_places=4)
+    rot_z = models.DecimalField(max_digits=10, decimal_places=4)
+    ragemp_object_id = models.PositiveIntegerField()
+    
+    class Meta:
+        db_table = 'objects'
+
+class Vehicles(models.Model):
+    x = models.DecimalField(max_digits=10, decimal_places=4)
+    y = models.DecimalField(max_digits=10, decimal_places=4)
+    z = models.DecimalField(max_digits=10, decimal_places=4)
+    rot_x = models.DecimalField(max_digits=10, decimal_places=4)
+    rot_y = models.DecimalField(max_digits=10, decimal_places=4)
+    rot_z = models.DecimalField(max_digits=10, decimal_places=4)
+    ragemp_vehicle_id = models.PositiveIntegerField()
+
+    class Meta:
+        db_table = 'vehicles'
