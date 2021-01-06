@@ -2,7 +2,7 @@ from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from apilogic.models import DerbyArenas, DerbyArenasSpawns, DmArenas, DmArenasSpawns, DmArenasWeapons, HeavyDmArenas, HeavyDmArenasSpawns, HeavyDmArenasWeapons, HideandseekArenas, HideandseekArenasSpawns
 from apilogic.models import Ranks, OneShootArenas, OneShootArenasSpawns, OneShootArenasWeapons, Players, PlayersSpawns, RaceArenas, RaceArenasCheckpoints, RaceArenasSpawns, Settings, SniperArenas, TdmArenas, TdmArenasSpawns, TdmArenasWeapons
-from apilogic.models import ShopEntities, ShopTabFilterData, ShopTabData, Items, PlayersItems, ItemsSections, Lootboxes, LootboxItems
+from apilogic.models import ShopEntities, ShopTabFilterData, ShopTabData, Items, PlayersItems, ItemsSections, Lootboxes, LootboxItems, Objects, Vehicles
 
 class ItemsSectionsSerializer(serializers.ModelSerializer):
     class Meta:
@@ -291,4 +291,14 @@ class LootboxesSerializer(serializers.ModelSerializer):
     )
     class Meta:
         model = Lootboxes
+        fields = '__all__'
+
+class ObjectsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Objects
+        fields = '__all__'
+
+class VehiclesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Vehicles
         fields = '__all__'
