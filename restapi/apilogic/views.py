@@ -96,12 +96,6 @@ class PlayersAPI(generics.GenericAPIView):
                         PlayersItems.objects.filter(player=int(data['player_id']), item__section__name=player_item.item.section.name).exclude(pk=player_item.id).update(equipped=False)
                     return Response(PlayersItemsSerializer(player_items, many=True).data)
                 return Response(0)
-        if action == 'play_as_guest':
-            if 'login' in data:
-                player_with_this_login = Players.objects.filter(login=data['login']).first()
-                if player_with_this_login is not None:
-                    return Response().all()
-                return Response(0)
 
         if action == 'login':
             if 'login' in data:
