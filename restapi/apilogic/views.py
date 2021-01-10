@@ -3,8 +3,8 @@ from django.http import Http404
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 import secrets
-from apilogic.serializers import PlayersSpawnsSerializer, VehiclesSerializer, ObjectsSerializer, PlayersItemsSerializer, ItemsSerializer, ShopTabDataLazySerializer, ShopTabDataSerializer, DerbyArenasSerializer, HideandseekArenasSerializer, RaceArenasSerializer, TdmArenasSerializer, LootboxesSerializer, LootboxItemsSerializer, PlayersSerializer, SettingsSerializer, DmArenasSerializer, HeavyDmArenasSerializer, SniperArenasSerializer, OneShootArenasSerializer
-from apilogic.models import Items, PlayersItems, DerbyArenas, ShopEntities, Objects, Vehicles, ShopTabData, Ranks, HideandseekArenas, RaceArenas, TdmArenas, DmArenas, HeavyDmArenas, SniperArenas, OneShootArenas, PlayersSpawns, Players, Settings, Lootboxes, LootboxItems
+from apilogic.serializers import PlayersSpawnsSerializer, TeleportsSerializer, VehiclesSerializer, ObjectsSerializer, PlayersItemsSerializer, ItemsSerializer, ShopTabDataLazySerializer, ShopTabDataSerializer, DerbyArenasSerializer, HideandseekArenasSerializer, RaceArenasSerializer, TdmArenasSerializer, LootboxesSerializer, LootboxItemsSerializer, PlayersSerializer, SettingsSerializer, DmArenasSerializer, HeavyDmArenasSerializer, SniperArenasSerializer, OneShootArenasSerializer
+from apilogic.models import Items, PlayersItems, DerbyArenas, ShopEntities, Teleports, Objects, Vehicles, ShopTabData, Ranks, HideandseekArenas, RaceArenas, TdmArenas, DmArenas, HeavyDmArenas, SniperArenas, OneShootArenas, PlayersSpawns, Players, Settings, Lootboxes, LootboxItems
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from random import randint
@@ -165,6 +165,13 @@ class ObjectsAPI(generics.ListAPIView):
             
     def get_serializer_class(self):
         return ObjectsSerializer
+        
+class TeleportsAPI(generics.ListAPIView):    
+    def get_queryset(self):
+        return Teleports.objects.all()
+            
+    def get_serializer_class(self):
+        return TeleportsSerializer
 
 class VehiclesAPI(generics.ListAPIView):    
     def get_queryset(self):

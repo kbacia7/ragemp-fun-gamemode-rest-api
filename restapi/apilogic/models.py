@@ -354,3 +354,14 @@ class Vehicles(models.Model):
 
     class Meta:
         db_table = 'vehicles'
+
+class Teleports(models.Model):
+    x = models.DecimalField(max_digits=10, decimal_places=4)
+    y = models.DecimalField(max_digits=10, decimal_places=4)
+    z = models.DecimalField(max_digits=10, decimal_places=4)
+    display_name = models.CharField(max_length=64)
+    alias = models.CharField(max_length=14)
+    heading = models.DecimalField(max_digits=10, decimal_places=4)
+    
+    class Meta:
+        db_table = 'teleports'
