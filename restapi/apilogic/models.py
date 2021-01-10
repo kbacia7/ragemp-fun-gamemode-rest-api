@@ -7,6 +7,12 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
+class Levels(models.Model):
+    level = models.SmallIntegerField()
+    required_exp = models.PositiveIntegerField(null=True)
+    class Meta:
+        db_table = 'levels'
+
 class ItemsSections(models.Model): 
     name = models.CharField(max_length=64)
     column_size = models.DecimalField(max_digits=2, decimal_places=1, default=1)
@@ -159,7 +165,9 @@ class Ranks(models.Model):
 class Players(models.Model):
     items = models.ManyToManyField(Items, related_name="items", through='PlayersItems')
     login = models.CharField(max_length=35)
+    level = models.ForeignKey(Levels, models.DO_NOTHING, null=True)
     rank = models.ForeignKey(Ranks, models.DO_NOTHING, null=True)
+    exp = models.PositiveIntegerField(null=True)
     deaths = models.IntegerField(blank=True, default=0)
     kills = models.IntegerField(blank=True, default=0)
     password = models.CharField(max_length=255)
